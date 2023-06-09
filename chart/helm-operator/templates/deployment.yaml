@@ -248,6 +248,9 @@ spec:
         {{- if .Values.git.defaultRef }}
         - --git-default-ref={{ .Values.git.defaultRef }}
         {{- end }}
+        - --git-url=git@github.com:anushriyayadav/gitops-tutorial
+        - --git-branch=master
+        - --git-path=deploy/kubernetes
         - --charts-sync-interval={{ .Values.chartsSyncInterval }}
         {{- if .Values.statusUpdateInterval }}
         - --status-update-interval={{ .Values.statusUpdateInterval }}
